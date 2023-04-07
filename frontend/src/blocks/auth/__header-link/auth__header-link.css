@@ -1,0 +1,30 @@
+.auth__header-link{
+  position: absolute;
+  top: -65px;
+  right: 0px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  opacity: 1;
+  transition: opacity 0.2s linear 0.1s;
+}
+
+.auth__header-link:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 935px) {
+  .auth__header-link{
+    right: 27px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .auth__header-link {
+    font-size: 14px;
+    top: -50px;
+  }
+}

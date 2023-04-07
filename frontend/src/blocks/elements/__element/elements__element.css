@@ -1,0 +1,21 @@
+.elements__element {
+  margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 282px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .elements__element {
+    margin: 0 auto 0;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .elements__element {
+    margin: 0;
+  }
+}

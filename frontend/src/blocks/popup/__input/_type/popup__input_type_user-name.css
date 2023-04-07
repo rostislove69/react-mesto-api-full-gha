@@ -1,0 +1,9 @@
+.popup__input_type_user-name {
+  margin-top: 29px;
+}
+
+@media screen and (max-width: 570px){
+  .popup__input_type_user-name{
+    margin-top: 0;
+  }
+}

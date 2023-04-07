@@ -1,0 +1,13 @@
+.popup__button-submit_inactive {
+  opacity: .2;
+  color: black;
+  background-color: aliceblue;
+  border:1px solid black;
+  user-select: none;
+  pointer-events: none;
+}
+
+.popup__button-submit_inactive:hover {
+  cursor:auto;
+  opacity: .2;
+}

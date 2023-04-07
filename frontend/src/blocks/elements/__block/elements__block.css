@@ -1,0 +1,7 @@
+.elements__block {
+  padding: 25px 0 25px 0;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
