@@ -108,13 +108,7 @@ const getUserProfile = (req, res, next) => User.findById(req.user._id)
     }
     res.status(statusCodes.ok).send(user);
   })
-  .catch((err) => {
-    if (err.name === 'CastError') {
-      next(new BadRequestError(messages.badRequest));
-    } else {
-      next(err);
-    }
-  });
+  .catch(next);
 
 module.exports = {
   getUsers,

@@ -41,7 +41,9 @@ function Register(props){
           type="password"
           placeholder="Пароль"
           value={userData.password || ""}
-          onChange={handleChange}/>
+          onChange={handleChange}
+          required
+          minLength="8"/>
         <button className="auth__button" type="submit">Зарегистрироваться</button>
       </form>
       <p className="auth__subtitle">Уже зарегистрированы?

@@ -36,14 +36,18 @@ function Login(props){
           placeholder="Email"
           autoComplete="off"
           value={userData.email || ''}
-          onChange={handleChange}/>
+          onChange={handleChange}
+          required
+          />
         <input
           className="auth__input"
           id="password"
           name="password" type="password"
           placeholder="Пароль"
           value={userData.password || ''}
-          onChange={handleChange}/>
+          onChange={handleChange}
+          required
+          minLength="8"/>
         <button className="auth__button" type="submit">Войти</button>
       </form>
       <Link to="/sign-up" className="auth__header-link">Регистрация</Link>

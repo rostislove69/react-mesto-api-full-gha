@@ -17,13 +17,7 @@ const postCard = (req, res, next) => {
       Card.findById(card._id)
         .populate(['owner', 'likes'])
         .then((result) => res.status(statusCodes.created).send(result))
-        .catch((err) => {
-          if (err.name === 'ValidationError') {
-            next(new BadRequestError(messages.badRequest));
-          } else {
-            next(err);
-          }
-        });
+        .catch(next);
     })
     .catch((err) => {
       if (err.name === 'ValidationError') {
@@ -42,7 +36,7 @@ const deleteCard = (req, res, next) => Card.findById(req.params.cardId)
     if (!card.owner.equals(req.user._id)) {
       throw new NoRightsError(messages.notDeleted);
     }
-    card.deleteOne()
+    return card.deleteOne()
       .then(() => res.status(statusCodes.ok).send({ message: messages.deleted }));
   })
   .catch((err) => {
